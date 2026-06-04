@@ -4,9 +4,9 @@ import aryadarshan from "../assets/projects/aryadarshan.png";
 
 const projects = [
   {
-    title: "RTUpedia",
-    description:
-      "A study platform for RTU students providing notes, PYQs, syllabus and academic resources.",
+  title: "RTUpedia",
+  description:
+    "A comprehensive educational platform built for Rajasthan Technical University students, providing semester-wise notes, previous year papers, syllabus resources, and academic tools in one centralized hub.",
 
     tech: [
       "React",
@@ -23,10 +23,9 @@ const projects = [
   },
 
   {
-    title: "SoftStrides",
-
-    description:
-      "A full-stack e-commerce platform with authentication, cart management and product browsing.",
+     title: "SoftStrides",
+  description:
+    "A modern e-commerce platform featuring authentication, product browsing, cart management, and responsive UI, designed to deliver a seamless shopping experience.",
 
     tech: [
       "React",
@@ -43,10 +42,9 @@ const projects = [
   },
 
   {
-    title: "Aryadarshan",
-
-    description:
-      "Platform for exploring hidden gems and heritage locations across India.",
+ title: "Aryadarshan",
+  description:
+    "A cultural discovery platform that helps users explore India's hidden heritage sites, historical landmarks, and lesser-known travel destinations.",
 
     tech: [
       "React",
@@ -62,10 +60,9 @@ const projects = [
   },
 
   {
-    title: "Pooja Shree Catering",
-
-    description:
-      "Client, order and attendance management system currently under development.",
+     title: "Pooja Shree Catering",
+  description:
+    "A business management application for handling catering orders, employee attendance, customer records, and operational workflows with a Promotional website.",
 
     tech: [
       "React Native",
@@ -74,9 +71,9 @@ const projects = [
       "Next.js"
     ],
 
-    image: "/projects/pooja.png",
+    image: null,
 
-    live: "#",
+    live: null ,
 
     github: "https://github.com/anuragkumar012/Pooja-Shree-catering"
   }

@@ -1,29 +1,41 @@
+import {
+  Users,
+  UserCheck,
+  Shield,
+  Lightbulb
+} from "lucide-react";
+
 function Leadership() {
   const responsibilities = [
     {
+      icon: <Users size={28} />,
       title: "Class Representative",
       description:
-        "Coordinated communication between students and faculty members."
+        "Acted as the bridge between students and faculty, ensuring smooth communication and coordination."
     },
 
     {
+      icon: <UserCheck size={28} />,
       title: "Girl Coordinator",
       description:
-        "Supported participant management and coordination during college events."
+        "Managed student participation, engagement and coordination during academic and cultural events."
     },
 
     {
-      title: "Escorting & Disciplinary Team Member",
+      icon: <Shield size={28} />,
+      title: "Escorting & Discipline Team",
       description:
-        "Managed discipline and coordination during technical and cultural events."
+        "Maintained event discipline, attendee management and smooth execution of campus activities."
     },
 
     {
+      icon: <Lightbulb size={28} />,
       title: "Technical Event Volunteer",
       description:
-        "Assisted in organizing and managing technical events and activities."
+        "Supported planning and execution of technical workshops, competitions and innovation events."
     }
   ];
+
 
   return (
     <section
@@ -35,12 +47,12 @@ function Leadership() {
         <div className="text-center">
 
           <h2 className="text-4xl md:text-5xl font-bold">
-            Leadership & Activities
+            Leadership & Campus Impact
           </h2>
 
           <p className="mt-4 text-slate-600">
-            Responsibilities that strengthened my communication,
-            teamwork and leadership skills.
+            Experiences that strengthened my leadership,
+            communication, event management and teamwork skills.
           </p>
 
         </div>
@@ -48,8 +60,10 @@ function Leadership() {
         <div
           className="
           grid
-          md:grid-cols-2
-          gap-8
+         grid
+sm:grid-cols-2
+lg:grid-cols-4
+gap-6
           mt-16
           "
         >
@@ -59,38 +73,63 @@ function Leadership() {
             <div
               key={item.title}
               className="
-              bg-white
-              border
-              border-slate-200
-              rounded-3xl
-              p-8
-              hover:shadow-lg
-              transition
-              "
+  group
+  bg-white
+  border
+  border-slate-200
+  rounded-3xl
+  p-8
+  hover:border-blue-300
+  hover:shadow-xl
+  hover:-translate-y-2
+  transition-all
+  duration-300
+  hover:-translate-y-2
+hover:border-blue-200
+duration-300
+  "
             >
+
+             <div
+  className="
+  w-14
+  h-14
+  rounded-2xl
+  bg-gradient-to-br
+  from-blue-50
+  to-blue-100
+  text-blue-600
+  flex
+  items-center
+  justify-center
+  shadow-sm
+  "
+>
+  {item.icon}
+</div>
 
               <h3
                 className="
-                text-xl
-                font-bold
-                text-slate-900
-                "
+    mt-6
+    text-xl
+    font-bold
+    text-slate-900
+    "
               >
                 {item.title}
               </h3>
 
               <p
                 className="
-                mt-3
-                text-slate-600
-                leading-relaxed
-                "
+    mt-3
+    text-slate-600
+    leading-relaxed
+    "
               >
                 {item.description}
               </p>
 
             </div>
-
           ))}
 
         </div>

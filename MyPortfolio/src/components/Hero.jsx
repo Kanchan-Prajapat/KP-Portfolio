@@ -4,6 +4,7 @@ import {
   FaLinkedin,
   FaEnvelope
 } from "react-icons/fa";
+import resume from "../assets/resume.pdf";
 
 function Hero() {
   return (
@@ -21,10 +22,12 @@ to-blue-50
         max-w-7xl
         mx-auto
         px-6
+        pt-[90px]
         grid
         md:grid-cols-2
         gap-16
         items-center
+
         "
       >
         {/* Left Side */}
@@ -67,7 +70,9 @@ to-blue-50
             </a>
 
             <a
-              href="/resume.pdf"
+              href={resume}
+              target="_blank"
+              rel="noreferrer"
               className="
               border-2
               border-blue-600

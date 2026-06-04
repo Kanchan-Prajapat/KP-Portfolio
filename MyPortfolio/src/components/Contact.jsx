@@ -1,38 +1,39 @@
 import {
-  Mail,
-  Award,
-  Link,
-  Download
-} from "lucide-react";
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaDownload
+} from "react-icons/fa";
+import resume from "../assets/resume.pdf";
 
 function Contact() {
   const contacts = [
     {
-      icon: <Mail size={24} />,
+      icon: <FaEnvelope size={22} />,
       title: "Email",
       value: "kanchanprajapat208@gmail.com",
       link: "mailto:kanchanprajapat208@gmail.com"
     },
 
     {
-      icon: <Award size={24} />,
+      icon: <FaGithub size={22} />,
       title: "GitHub",
       value: "Kanchan-Prajapat",
       link: "https://github.com/Kanchan-Prajapat"
     },
 
     {
-      icon: <Link size={24} />,
+      icon: <FaLinkedin size={22} />,
       title: "LinkedIn",
       value: "Connect with me",
       link: "https://www.linkedin.com/in/kanchan-prajapat-829336327/"
     },
 
     {
-      icon: <Download size={24} />,
+      icon: <FaDownload size={22} />,
       title: "Resume",
       value: "Download CV",
-      link: "/resume.pdf"
+      link: resume
     }
   ];
 
@@ -99,20 +100,20 @@ function Contact() {
               "
             >
 
-              <div
-                className="
-                w-12
-                h-12
-                rounded-full
-                bg-blue-100
-                text-blue-600
-                flex
-                items-center
-                justify-center
-                "
-              >
-                {item.icon}
-              </div>
+             <div
+  className="
+  w-14
+  h-14
+  rounded-2xl
+  bg-blue-100
+  text-blue-600
+  flex
+  items-center
+  justify-center
+  "
+>
+  {item.icon}
+</div>
 
               <h3
                 className="

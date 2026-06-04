@@ -10,16 +10,36 @@ function Projects() {
 
         <div className="text-center">
 
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <span className="text-blue-600 font-semibold">
+            MY WORK
+          </span>
+
+          <h2
+            className="
+    mt-3
+    text-4xl
+    md:text-5xl
+    font-bold
+    text-slate-900
+    "
+          >
             Featured Projects
           </h2>
 
-          <p className="mt-4 text-slate-600">
-            Some of my recent work.
+          <p
+            className="
+    mt-4
+    text-slate-600
+    max-w-2xl
+    mx-auto
+    "
+          >
+            A selection of projects showcasing my experience
+            in full-stack development, educational platforms,
+            business applications, and modern web solutions.
           </p>
 
         </div>
-
         <div className="mt-20 space-y-28">
 
           {projects.map((project, index) => (
@@ -45,10 +65,14 @@ function Projects() {
                   src={project.image}
                   alt={project.title}
                   className="
-                  rounded-3xl
-                  border
-                  shadow-lg
-                  "
+rounded-3xl
+border
+border-slate-200
+shadow-xl
+hover:scale-[1.02]
+transition-all
+duration-500
+"
                 />
               </div>
 
@@ -96,10 +120,12 @@ function Projects() {
                       className="
                       px-4
                       py-2
-                      bg-blue-50
-                      text-blue-700
-                      rounded-full
-                      text-sm
+                     bg-white
+border
+border-blue-100
+text-blue-700
+font-medium
+shadow-sm
                       "
                     >
                       {tech}
@@ -111,33 +137,44 @@ function Projects() {
 
                 <div className="flex gap-4 mt-8">
 
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="
-                    bg-blue-600
-                    text-white
-                    px-5
-                    py-3
-                    rounded-xl
-                    "
-                  >
-                    Live Demo
-                  </a>
+                {
+  project.live && (
+    <a
+      href={project.live}
+      target="_blank"
+      rel="noreferrer"
+      className="
+bg-blue-600
+hover:bg-blue-700
+text-white
+font-medium
+px-6
+py-3
+rounded-xl
+transition
+"
+    >
+      Live Demo
+    </a>
+  )
+}
 
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="
-                    border
-                    border-blue-600
-                    text-blue-600
-                    px-5
-                    py-3
-                    rounded-xl
-                    "
+                   className="
+border
+border-slate-300
+text-slate-700
+hover:border-blue-600
+hover:text-blue-600
+font-medium
+px-6
+py-3
+rounded-xl
+transition
+"
                   >
                     GitHub
                   </a>

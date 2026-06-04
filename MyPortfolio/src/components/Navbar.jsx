@@ -1,3 +1,6 @@
+import { Code2 } from "lucide-react";
+import resume from "../assets/resume.pdf";
+
 function Navbar() {
   return (
     <nav
@@ -6,11 +9,12 @@ function Navbar() {
       top-0
       left-0
       w-full
-      bg-white/90
-      backdrop-blur-md
-      border-b
-      border-slate-200
       z-50
+      bg-white/80
+      backdrop-blur-lg
+      border-b
+      border-slate-200/60
+      shadow-sm
       "
     >
       <div
@@ -18,7 +22,7 @@ function Navbar() {
         max-w-7xl
         mx-auto
         px-6
-        py-4
+        h-20
         flex
         items-center
         justify-between
@@ -26,93 +30,78 @@ function Navbar() {
       >
         {/* Logo */}
 
-        <a
-          href="#home"
-          className="
-          text-2xl
-          font-bold
-          text-slate-900
-          "
-        >
-          Kanchan<span className="text-blue-600">.</span>
-        </a>
+      <a href="#home" className="flex items-center gap-2">
+  <Code2 className="text-blue-600" size={28} />
+  <span className="text-2xl font-bold">
+    Kanchan<span className="text-blue-600">.</span>
+  </span>
+</a>
 
-        {/* Navigation */}
+        {/* Menu */}
 
         <ul
           className="
           hidden
           md:flex
           items-center
-          gap-8
+          gap-10
           text-slate-700
           font-medium
           "
         >
-          <li>
-            <a
-              href="#home"
-              className="hover:text-blue-600 transition"
-            >
-              Home
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#about"
-              className="hover:text-blue-600 transition"
-            >
-              About
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#skills"
-              className="hover:text-blue-600 transition"
-            >
-              Skills
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#projects"
-              className="hover:text-blue-600 transition"
-            >
-              Projects
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#contact"
-              className="hover:text-blue-600 transition"
-            >
-              Contact
-            </a>
-          </li>
+          {[
+            "Home",
+            "About",
+            "Skills",
+            "Projects",
+            "Experience",
+            "Certifications",
+            "Contact",
+          ].map((item) => (
+            <li key={item}>
+              <a
+                href={`#${item.toLowerCase()}`}
+                className="
+                relative
+                hover:text-blue-600
+                transition
+                after:absolute
+                after:left-0
+                after:-bottom-2
+                after:w-0
+                after:h-[2px]
+                after:bg-blue-600
+                after:transition-all
+                hover:after:w-full
+                "
+              >
+                {item}
+              </a>
+            </li>
+          ))}
         </ul>
 
-        {/* Resume Button */}
+        {/* Resume */}
 
         <a
-          href="/resume.pdf"
+         href={resume}
           target="_blank"
           rel="noreferrer"
           className="
           hidden
           md:inline-flex
           items-center
-          px-5
-          py-2.5
+          px-6
+          py-3
           rounded-xl
           bg-blue-600
           text-white
           font-medium
+          shadow-md
           hover:bg-blue-700
-          transition
+          hover:shadow-lg
+          hover:-translate-y-0.5
+          transition-all
           "
         >
           Resume
