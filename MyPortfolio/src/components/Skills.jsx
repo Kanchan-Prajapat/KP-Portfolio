@@ -1,23 +1,27 @@
-function Skills() {
+import {
+  Code2,
+  Server,
+  Database,
+  Wrench
+} from "lucide-react";
 
+function Skills() {
   const skillGroups = [
     {
       title: "Frontend",
-      emoji: "🎨",
+      icon: <Code2 size={28} />,
       skills: [
         "React",
-        "Next.js",
         "JavaScript",
         "HTML",
         "CSS",
-        "Tailwind CSS",
-        "Three.js"
+        "Tailwind CSS"
       ]
     },
 
     {
       title: "Backend",
-      emoji: "⚙️",
+      icon: <Server size={28} />,
       skills: [
         "Node.js",
         "Express.js",
@@ -27,7 +31,7 @@ function Skills() {
 
     {
       title: "Database",
-      emoji: "🗄️",
+      icon: <Database size={28} />,
       skills: [
         "MongoDB",
         "MySQL"
@@ -36,7 +40,7 @@ function Skills() {
 
     {
       title: "Tools",
-      emoji: "🛠️",
+      icon: <Wrench size={28} />,
       skills: [
         "Git",
         "GitHub",
@@ -53,33 +57,38 @@ function Skills() {
     >
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Heading */}
-
         <div className="text-center">
+
+          <span className="text-blue-600 font-semibold">
+            MY TECH STACK
+          </span>
 
           <h2
             className="
+            mt-3
             text-4xl
             md:text-5xl
             font-bold
             text-slate-900
             "
           >
-            Skills
+            Skills & Technologies
           </h2>
 
           <p
             className="
             mt-4
             text-slate-600
+            max-w-2xl
+            mx-auto
             "
           >
-            Technologies and tools I use to build modern applications.
+            Technologies and tools I use to build
+            scalable, responsive and modern web
+            applications.
           </p>
 
         </div>
-
-        {/* Skill Cards */}
 
         <div
           className="
@@ -100,26 +109,47 @@ function Skills() {
               border-slate-200
               rounded-3xl
               p-8
+              hover:-translate-y-2
               hover:shadow-xl
-              transition
+              transition-all
+              duration-300
               "
             >
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-4">
 
-                <span className="text-3xl">
-                  {group.emoji}
-                </span>
-
-                <h3
+                <div
                   className="
-                  text-2xl
-                  font-semibold
-                  text-slate-900
+                  w-14
+                  h-14
+                  rounded-2xl
+                  bg-gradient-to-br
+                  from-blue-500
+                  to-sky-400
+                  text-white
+                  flex
+                  items-center
+                  justify-center
                   "
                 >
-                  {group.title}
-                </h3>
+                  {group.icon}
+                </div>
+
+                <div>
+                  <h3
+                    className="
+                    text-2xl
+                    font-bold
+                    text-slate-900
+                    "
+                  >
+                    {group.title}
+                  </h3>
+
+                  <p className="text-slate-500 text-sm">
+                    {group.skills.length} Technologies
+                  </p>
+                </div>
 
               </div>
 
@@ -128,7 +158,7 @@ function Skills() {
                 flex
                 flex-wrap
                 gap-3
-                mt-6
+                mt-8
                 "
               >
 
@@ -139,11 +169,16 @@ function Skills() {
                     className="
                     px-4
                     py-2
+                    rounded-full
                     bg-blue-50
                     text-blue-700
-                    rounded-full
-                    text-sm
                     font-medium
+                    border
+                    border-blue-100
+                    hover:bg-blue-600
+                    hover:text-white
+                    transition
+                    cursor-default
                     "
                   >
                     {skill}

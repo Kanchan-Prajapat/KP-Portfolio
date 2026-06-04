@@ -1,25 +1,27 @@
 import { Briefcase, GraduationCap } from "lucide-react";
 
 function Experience() {
-  const experiences = [
-    {
-      year: "2026",
-      title: "Linux RHCSA Training",
-      organization: "RedHat RCAT",
-      icon: <GraduationCap size={20} />,
-      description:
-        "Completed RHCSA training covering Linux administration, user management, networking, and system operations."
-    },
+ const experiences = [
+  {
+    year: "2025",
+    title: "MERN Stack Developer Intern",
+    organization: "Zeetron Networks",
+    icon: <Briefcase size={20} />,
+    skills: ["React", "Node.js", "MongoDB", "Git"],
+    description:
+      "Worked on MERN stack applications, collaborated using Git/GitHub workflows, and contributed to responsive web projects."
+  },
 
-    {
-      year: "2025",
-      title: "MERN Stack Intern",
-      organization: "Zeetron Networks",
-      icon: <Briefcase size={20} />,
-      description:
-        "Learned MERN stack development, Git/GitHub workflows, and built collaborative projects using modern web technologies."
-    }
-  ];
+  {
+    year: "2026",
+    title: "Linux RHCSA Training",
+    organization: "RedHat RCAT",
+    icon: <GraduationCap size={20} />,
+    skills: ["Linux", "Networking", "Shell", "System Admin"],
+    description:
+      "Completed RHCSA training covering Linux administration, networking, user management, and troubleshooting."
+  }
+];
 
   return (
     <section
@@ -32,15 +34,27 @@ function Experience() {
 
         <div className="text-center">
 
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
-            Experience
-          </h2>
 
-          <p className="mt-4 text-slate-600">
-            My professional and learning journey.
-          </p>
+  <span className="text-blue-600 font-semibold">
+    MY JOURNEY
+  </span>
 
-        </div>
+  <h2
+    className="
+    mt-3
+    text-4xl
+    md:text-5xl
+    font-bold
+    "
+  >
+    Experience & Learning
+  </h2>
+
+  <p className="mt-4 text-slate-600">
+    My professional growth, internships and technical learning path.
+  </p>
+
+</div>
 
         {/* Timeline */}
 
@@ -94,34 +108,73 @@ function Experience() {
               {/* Card */}
 
               <div
-                className="
-                bg-slate-50
-                border
-                border-slate-200
-                rounded-3xl
-                p-6
-                hover:shadow-lg
-                transition
-                "
-              >
+  className="
+  bg-white
+  border
+  border-slate-200
+  rounded-3xl
+  p-8
+  shadow-sm
+  hover:shadow-xl
+  hover:-translate-y-1
+  transition-all
+  duration-300
+  "
+>
+  <span className="text-blue-600 font-semibold">
+    {item.year}
+  </span>
 
-                <span className="text-blue-600 font-semibold">
-                  {item.year}
-                </span>
+  <h3
+    className="
+    text-2xl
+    font-bold
+    mt-2
+    text-slate-900
+    "
+  >
+    {item.title}
+  </h3>
 
-                <h3 className="text-2xl font-bold mt-2 text-slate-900">
-                  {item.title}
-                </h3>
+  <p
+    className="
+    text-slate-500
+    mt-1
+    "
+  >
+    {item.organization}
+  </p>
 
-                <h4 className="text-slate-600 mt-1">
-                  {item.organization}
-                </h4>
+  <p
+    className="
+    mt-4
+    text-slate-600
+    leading-relaxed
+    "
+  >
+    {item.description}
+  </p>
 
-                <p className="mt-4 text-slate-600 leading-relaxed">
-                  {item.description}
-                </p>
-
-              </div>
+  <div className="flex flex-wrap gap-2 mt-5">
+    {item.skills.map((skill) => (
+      <span
+        key={skill}
+        className="
+        px-3
+        py-1
+        rounded-full
+        bg-blue-50
+        text-blue-700
+        text-sm
+        border
+        border-blue-100
+        "
+      >
+        {skill}
+      </span>
+    ))}
+  </div>
+</div>
 
             </div>
 
