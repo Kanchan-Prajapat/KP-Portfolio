@@ -1,6 +1,7 @@
 import rtupedia from "../assets/projects/rtupedia.png";
 import softstrides from "../assets/projects/softstrides.png";
 import aryadarshan from "../assets/projects/aryadarshan.png";
+import poojashree from "../assets/projects/poojashree.png";
 
 const projects = [
   {
@@ -71,7 +72,7 @@ const projects = [
       "Next.js"
     ],
 
-    image: null,
+    image: poojashree,
 
     live: null ,
 
