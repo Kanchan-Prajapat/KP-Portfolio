@@ -1,7 +1,7 @@
-import rtupedia from "../assets/projects/rtupedia.png";
-import softstrides from "../assets/projects/softstrides.png";
-import aryadarshan from "../assets/projects/aryadarshan.png";
-import poojashree from "../assets/projects/poojashree.png";
+import rtupedia from "../assets/projects/rtupedia.jpg";
+import softstrides from "../assets/projects/softstrides.jpg";
+import aryadarshan from "../assets/projects/aryadarshan.jpg";
+import poojashree from "../assets/projects/poojashree.jpg";
 
 const projects = [
   {
