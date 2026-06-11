@@ -26,7 +26,7 @@ function Contact() {
       icon: <FaLinkedin size={22} />,
       title: "LinkedIn",
       value: "Connect with me",
-      link: "https://www.linkedin.com/in/kanchan-prajapat-829336327/"
+      link: "https://www.linkedin.com/in/kanchan-prajapat92577/"
     },
 
     {

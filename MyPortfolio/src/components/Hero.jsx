@@ -103,7 +103,7 @@ to-blue-50
             </a>
 
             <a
-              href="https://www.linkedin.com/in/kanchan-prajapat-829336327/"
+              href="https://www.linkedin.com/in/kanchan-prajapat92577/"
               target="_blank"
               rel="noreferrer"
               className="text-slate-600 hover:text-blue-600"
